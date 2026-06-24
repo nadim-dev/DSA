@@ -1,17 +1,14 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         startPos=-1
-        isStartPosExist=False
-        count=0
+        endPos=-1
         for i in range(len(nums)):
             if nums[i] == target:
-                if not isStartPosExist:
-                    isStartPosExist=True
+                if startPos == -1:
                     startPos=i
-                else :    
-                    count+=1
+                endPos=i
 
-        return [startPos,startPos+count]
+        return [startPos,endPos]
 
                 
             
