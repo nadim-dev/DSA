@@ -6,6 +6,7 @@ class Solution:
             if nums[i]!=0:
                 count+=1
                 max_consicutive_count=max(max_consicutive_count,count)
+                
             else:
                 count=0    
 
