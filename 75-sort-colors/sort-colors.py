@@ -13,4 +13,3 @@ class Solution:
             rigth-=1
         else:
             i+=1
-        
