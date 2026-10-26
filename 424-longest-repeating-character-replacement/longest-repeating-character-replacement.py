@@ -13,8 +13,8 @@ class Solution:
             diff=lenght-max_value
             while diff > k:
                 freq[s[low]]-=1
-                if freq[s[low]] == 0:
-                    del freq[s[low]]
+                # if freq[s[low]] == 0:
+                #     del freq[s[low]]
                 low=low+1
                 lenght=high-low+1
                 max_value=max(freq.values())
@@ -25,5 +25,4 @@ class Solution:
             if high == n:
                 break
             
-        return result
-            
+        return result     
