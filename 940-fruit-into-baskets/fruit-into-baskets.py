@@ -7,14 +7,7 @@ class Solution:
         dict={}
         while high < n:
             fruit=fruits[high]
-            if fruit not in dict:
-                dict[fruit]=1
-            else:
-                dict[fruit]+=1
-
-            if len(dict) <= 2:
-                max_fruit=high-low+1
-                result=max(result,max_fruit)
+            dict[fruit]=dict.get(fruit,0)+1
             
             while len(dict) > 2:
                 fruit=fruits[low]
@@ -22,5 +15,8 @@ class Solution:
                 if dict[fruit] == 0:
                    del dict[fruit]
                 low+=1
+                
+            max_fruit=high-low+1
+            result=max(result,max_fruit)
             high+=1
         return result
