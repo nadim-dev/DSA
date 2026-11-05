@@ -3,8 +3,8 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
         m=len(s)
         n=len(t)
-        if n > m :
-            return ""
+        # if n > m :
+        #     return ""
 
         low=0
         high=0
